@@ -51,34 +51,60 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <>
-      {/* Top Notification / Stats Banner */}
-      <div className="bg-gradient-to-r from-cyan-950 via-slate-950 to-purple-950 text-slate-300 text-xs py-2 px-4 border-b border-cyan-500/20">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 overflow-hidden text-ellipsis whitespace-nowrap">
-            <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 font-semibold text-[10px] border border-cyan-500/30">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
-              LIVE ECOSYSTEM
-            </span>
-            <span className="hidden sm:inline text-slate-300">
-              ⚡ <strong className="text-white">{activeCreatorsCount}</strong> creators active right now across {globalHubsCount} global hubs
-            </span>
-          </div>
-          <div className="flex items-center gap-4 text-xs shrink-0">
-            <button
-              onClick={onOpenDemo}
-              className="hover:text-cyan-300 flex items-center gap-1 transition-colors"
-            >
-              <Rocket className="w-3.5 h-3.5 text-cyan-400" />
-              Watch Demo (2 mins)
-            </button>
-            <button
-              onClick={onOpenCreatorCard}
-              className="text-purple-300 hover:text-purple-200 font-medium flex items-center gap-1 transition-colors"
-            >
-              <Sparkles className="w-3.5 h-3.5 text-purple-400" />
-              Generate Creator Card
-            </button>
-          </div>
+      {/* Top Sliding Left Announcement & Live Ecosystem Ticker */}
+      <div className="bg-gradient-to-r from-slate-950 via-cyan-950/70 to-slate-950 text-slate-300 text-xs py-2 px-2 border-b border-cyan-500/25 overflow-hidden relative group">
+        <div className="animate-marquee flex items-center gap-8 whitespace-nowrap">
+          {/* Render track twice for seamless infinite left sliding loop */}
+          {[1, 2].map((loopIndex) => (
+            <div key={loopIndex} className="flex items-center gap-8 shrink-0">
+              
+              {/* Startup Name */}
+              <div className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 font-bold text-cyan-300 text-[11px]">
+                <span className="text-xs">🚀</span>
+                <span>Creatiq AI Studio</span>
+              </div>
+
+              {/* Tagline */}
+              <div className="flex items-center gap-1 text-slate-300 text-[11px] font-medium">
+                <span className="text-cyan-400 font-bold">•</span>
+                <span>Empowering 100K+ Next-Gen AI Creators & Builders</span>
+              </div>
+
+              {/* Founder Name */}
+              <div className="flex items-center gap-1.5 text-purple-300 text-[11px] font-bold bg-purple-500/10 px-2 py-0.5 rounded-full border border-purple-500/30">
+                <span className="text-xs">👑</span>
+                <span>Founder: <strong className="text-white">Aditya Sharma</strong></span>
+              </div>
+
+              {/* Live Ecosystem Stats */}
+              <div className="flex items-center gap-2 text-emerald-300 text-[11px] font-semibold bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/30">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                <span>LIVE ECOSYSTEM ⚡ <strong className="text-white">{activeCreatorsCount}</strong> creators active right now across {globalHubsCount} global hubs</span>
+              </div>
+
+              {/* Watch Demo Button */}
+              <button
+                onClick={onOpenDemo}
+                className="px-2.5 py-0.5 rounded-full bg-cyan-900/40 hover:bg-cyan-800/60 border border-cyan-400/40 text-cyan-200 font-bold text-[11px] flex items-center gap-1.5 transition-all hover:scale-105 cursor-pointer shadow-sm shadow-cyan-950"
+              >
+                <Rocket className="w-3.5 h-3.5 text-cyan-400" />
+                <span>Watch Demo (2 mins)</span>
+              </button>
+
+              {/* Generate Creator Card Button */}
+              <button
+                onClick={onOpenCreatorCard}
+                className="px-2.5 py-0.5 rounded-full bg-purple-900/40 hover:bg-purple-800/60 border border-purple-400/40 text-purple-200 font-bold text-[11px] flex items-center gap-1.5 transition-all hover:scale-105 cursor-pointer shadow-sm shadow-purple-950"
+              >
+                <Sparkles className="w-3.5 h-3.5 text-purple-400" />
+                <span>Generate Creator Card</span>
+              </button>
+
+              {/* Divider Symbol */}
+              <span className="text-slate-600 font-mono text-[10px]">❖</span>
+
+            </div>
+          ))}
         </div>
       </div>
 
