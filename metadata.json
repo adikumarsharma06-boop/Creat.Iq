@@ -1,0 +1,6 @@
+{
+  "name": "Creatiq",
+  "description": "Create Smarter. Grow Faster. Official website for Creatiq - an AI-powered ecosystem for learning, creating, collaborating, and growing together.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

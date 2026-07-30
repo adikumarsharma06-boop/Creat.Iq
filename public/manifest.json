@@ -1,0 +1,39 @@
+{
+  "short_name": "Creatiq",
+  "name": "Creatiq - AI Ecosystem for Learning & Building",
+  "description": "Create Smarter. Grow Faster. An AI-powered ecosystem where people learn, create, collaborate, build projects, and grow together.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#020617",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "any",
+  "categories": ["productivity", "education", "utilities", "business"],
+  "screenshots": [
+    {
+      "src": "/screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Creatiq AI Dashboard"
+    }
+  ]
+}
