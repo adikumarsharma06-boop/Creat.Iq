@@ -85,7 +85,7 @@ export const Hero: React.FC<HeroProps> = ({
             <div className="pt-3 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
               <a
                 href="#pricing"
-                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-sm hover:opacity-95 transition-all shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2.5 group"
+                className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-cyan-500 via-blue-600 to-purple-600 text-white font-bold text-sm hover:opacity-95 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-xl shadow-cyan-500/25 flex items-center justify-center gap-2.5 group cursor-pointer"
               >
                 <span>Start Free Account</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -93,7 +93,7 @@ export const Hero: React.FC<HeroProps> = ({
 
               <button
                 onClick={onOpenSandbox}
-                className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-900/60 border border-cyan-500/40 hover:border-cyan-400 text-cyan-300 font-semibold text-sm transition-all flex items-center justify-center gap-2 backdrop-blur-md hover:bg-slate-900/90 shadow-lg"
+                className="w-full sm:w-auto px-6 py-4 rounded-2xl bg-slate-900/60 border border-cyan-500/40 hover:border-cyan-400 text-cyan-300 font-semibold text-sm transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 backdrop-blur-md hover:bg-slate-900/90 shadow-lg cursor-pointer"
               >
                 <Sparkles className="w-4 h-4 text-cyan-400 animate-pulse" />
                 <span>Launch Live AI Sandbox</span>
